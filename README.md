@@ -15,5 +15,5 @@ License
 
 See LICENSE.
 
-[lk-stacey]: http://github.com/sparanoid/lindsay-koinaka-stacey
+[jk]: https://github.com/mojombo/jekyll
 [sp]: http://sparanoid.com/
