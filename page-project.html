@@ -1,0 +1,16 @@
+---
+layout: page
+type: page
+title: Project
+head: Category - Project
+permalink: /project/index.html
+excerpt: A collection of design works and projects
+---
+
+<section class=text>
+<ul class=pl>
+{% for post in site.categories.project %}
+	{% include post-list-link.html %}
+{% endfor %}
+</ul>
+</section>

@@ -1,0 +1,16 @@
+---
+layout: page
+type: page
+title: Notebook
+head: Category - Notebook
+permalink: /notebook/index.html
+excerpt: News about this site and the author
+---
+
+<section class=text>
+<ul class=pl>
+{% for post in site.categories.notebook %}
+	{% include post-list-link.html %}
+{% endfor %}
+</ul>
+</section>
