@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<hgroup>
+	<h2>{{ page.head }}</h2>
+	<h1 class=rt>{{ page.title }}</h1>
+	{% if page.excerpt %}<h3 class=lt>{{ page.excerpt }}</h3>{% endif %}
+	<h4 title="{{ page.date | date: "%A, %b %d %Y" }}">{{ page.date | date: "%d" }}</h4>
+</hgroup>
+
+<article>
+	{{ content }}
+</article>

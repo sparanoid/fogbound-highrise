@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html dir=ltr lang=en>
+<head>
+<title>Sparanoid</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" type=image/x-icon href="data:image/gif;base64,R0lGODlhEAAQAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAAQABAAAAIkFI6JYur7YotqUpiC1lUFagEbl4RZl43ohbGHCboL7DD2jd8FADs=">
+
+<link href='https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet'>
+
+<style type="text/css">
+<!--
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+/* 	padding: 0 5%; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Goudy Bookletter 1911', Georgia, serif;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+	a:hover {
+		color: #f00;
+	}
+
+header ul {
+	text-align: center;
+	border-top: #000 solid 3px;
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+	padding-top: 6px;
+	text-transform: uppercase;
+}
+	header li {
+		display: inline;
+		margin-right: 1em;
+	}
+		header li a {
+			text-decoration: none;
+			color: #000;
+		}
+
+.lt {
+	width: 47%;
+	float: left;
+	text-align: right;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 12px;
+	opacity: 0.3;
+	margin-top: 3px; /* must use margin top to keep small font in right place, it sucks */
+}
+.rt {
+	width: 47%;
+	float: right;
+}
+
+hgroup {
+	height: 1144px;
+	max-width: 1144px;
+	margin: -50px auto -800px auto;
+	background: url(assets/img/b.png) no-repeat center -297px;
+}
+	hgroup h2 {
+		font-size: 100px;
+		letter-spacing: -0.03em;
+		text-align: center;
+		padding: 80px 0 50px 0;
+	}
+	hgroup h1 {
+		font-size: 24px;
+		margin-top: -6px;
+	}
+	hgroup h3 {
+	}
+
+article {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+	article section {
+		padding-bottom: 60px;
+	}
+	.text {
+		width: 47%;
+		margin-left: 53%;
+		text-align: justify;
+	}
+
+footer {
+	max-width: 1144px;
+	height: 1144px;
+	margin: -500px auto 0 auto;
+	background: url(assets/img/b.png) no-repeat center top,
+				url(assets/img/f.png) no-repeat center 500px,
+				url(assets/img/b.png) no-repeat center 500px,
+				url(assets/img/b.png) no-repeat center 770px;
+	padding: 563px 0 0 0;
+}
+	.is-entry {
+		height: 1044px;
+		background: url(assets/img/b.png) no-repeat center top,
+					url(assets/img/b.png) no-repeat center 80px,
+					url(assets/img/f.png) no-repeat center 580px,
+					url(assets/img/b.png) no-repeat center 580px,
+					url(assets/img/b.png) no-repeat center 850px;
+	}
+	#nv, #sc, #sp, #cp, #mt {
+	}
+	footer .rt {
+		font-size: 12px;
+		font-family: Arial, sans-serif;
+	}
+	#nv {
+		padding-bottom: 80px;
+	}
+		#nv .rt {
+			margin-top: -5px;
+		}
+	#sc, #mt {
+		padding-bottom: 100px;
+	}
+	#sp {
+		font-size: 14px;
+		width: 160px;
+		margin: 0 auto;
+		padding-bottom: 232px;
+		text-align: center;
+	}
+		.yoggrtad img {
+			border-radius: 4px;
+		}
+		.adby {
+			opacity: 0.3;
+			margin-top: 1em;
+			font-size: 11px;
+			font-family: Arial, sans-serif;
+			text-transform: uppercase;
+		}
+			.adby em {
+				text-transform: lowercase;
+				font-family: Georgia, serif;
+			}
+	#cp {
+		padding-bottom: 270px;
+		color: #fff;
+	}
+		#cp a {
+			color: #fff;
+		}
+		#cp .lt {
+			opacity: 1;
+		}
+		#cp .rt {
+			margin-top: 3px;
+			text-transform: uppercase;
+		}
+	#mt {
+		
+	}
+		#mt li {
+			list-style: none;
+			display: inline;
+		}
+		#mt .rt {
+			margin-top: 3px;
+			text-transform: uppercase;
+		}
+
+#n {
+	display: none;
+}
+
+@media screen and (max-width: 1024px) {
+	#n {
+		display: block;
+		z-index: 9000;
+		height: 100%;
+		color: #fff;
+		background: rgba(0, 0, 0, 0.9);
+		position: fixed;
+		padding: 10%;
+		font-family: Arial, sans-serif;
+		font-size: 64px;
+		text-transform: uppercase;
+		font-weight: bolder;
+		letter-spacing: -0.05em;
+		line-height: 0.77;
+/* 		word-spacing: 0.23em; */
+/* 		word-break: break-all; */
+	}
+}
+
+
+/* reset reset reset */
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+	margin: 2.5em 0;
+}
+
+section h1 {font-size: 170%;}
+section h2 {font-size: 160%;}
+section h3 {font-size: 150%;}
+section h4 {font-size: 140%;}
+section h5 {font-size: 130%;}
+section h6 {font-size: 120%;}
+
+section a {
+	color: #f00;
+}
+	section a:hover {
+		text-decoration: underline;
+	}
+	section a:active {
+		color: #b22;
+	}
+	section a:visited {
+		color: #b55;
+	}
+
+section img {
+	width: 100%;
+}
+
+section p {
+	margin: 1em 0;
+	line-height: 1.7;
+}
+
+section li {
+	line-height: 1.7;
+}
+
+/* first-children and last-children reset*/
+
+section p:first-child,
+section h1:first-child,
+section h2:first-child,
+section h3:first-child,
+section h4:first-child,
+section h5:first-child,
+section h6:first-child {
+	margin-top: 0;
+}
+section p:last-child,
+section h1:last-child,
+section h2:last-child,
+section h3:last-child,
+section h4:last-child,
+section h5:last-child,
+section h6:last-child {
+	margin-bottom: 0;
+}
+
+
+
+
+
+
+-->
+</style>
+
+</head>
+
+<body>
+
+<div id=n>
+	<p>Best view at:</p>
+	<p>2560 x 1440, aka. WQHD</p>
+	<p>Please upgrade your crappy display.</p>
+</div>
+
+<header>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Project</a></li>
+		<li><a href="#">Artwork</a></li>
+		<li><a href="#">Notebook</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+</header>
+
+
+<hgroup>
+	<h2>Fogbound Highrise Jekyll</h2>
+	<h1 class=rt>New Theme: Fogbound Highrise</h1>
+	<h3 class=lt>The missing Growl styles for Mac OS X</h3>
+</hgroup>
+	
+<article>
+	<section class=text>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p class=note>Lastest Version: <strong>0.4.3</strong> for foobar2000 1.0 / <strong>0.2</strong> for foobar2000 0.9.6.9</p>
+		<p class=note>0.4.* 版本的 Last.fm 同步功能可能會在退出 foobar2000 時隨機出現錯誤提示，但不會影響正常使用</p>
+	</section>
+	
+	<section class=text>
+		<h3>什麽是 MonoLite Plus？</h3>
+		
+		<p>MonoLite Plus 是一款基于 <a href="http://yuo.be/columns.php">Columns UI</a> 組件創建的 <a href="http://www.foobar2000.org/">foobar2000</a> 皮膚</p>
+		
+		<h3>與原版 MonoLite 有什麽不同？</h3>
+		
+		<ul>
+		<li>增加歌詞顯示功能，支持自動下載歌詞</li>
+		<li>增加藝術家簡介功能，信息來自 Last.fm</li>
+		<li>集成 Last.fm 同步功能，支持點擊圖標增加 Love 曲目</li>
+		<li>增加多種列表顯示模式（普通、<del datetime="2010-01-11T12:48:16+00:00">緊湊</del>、大圖標、小圖標等）</li>
+		<li>專輯標題樣式美化，增加陰影效果，修改字體</li>
+		<li>多處界面細節調整</li>
+		</ul>
+		
+		<p><strong>MonoLite Plus 0.4.* 界面截圖：</strong><a href="{{ site.file }}/monolite-plus-04-01.png" rel="lightbox[monolite_04]">#1</a> <a href="{{ site.file }}/monolite-plus-04-02.png" rel="lightbox[monolite_04]">#2</a><br />
+		<strong>MonoLite Plus 0.2 / 0.3.* 界面截圖：</strong><a href="{{ site.file }}/monolite-plus-02-01.png" rel="lightbox[monolite_02]">#1</a> <a href="{{ site.file }}/monolite-plus-02-02.png" rel="lightbox[monolite_02]">#2</a> <a href="{{ site.file }}/monolite-plus-02-03.png" rel="lightbox[monolite_02]">#3</a> <a href="{{ site.file }}/monolite-plus-02-04.png" rel="lightbox[monolite_02]">#4</a> <a href="{{ site.file }}/monolite-plus-02-05.png" rel="lightbox[monolite_02]">#5</a> <a href="{{ site.file }}/monolite-plus-02-06.png" rel="lightbox[monolite_02]">#6</a> <a href="{{ site.file }}/monolite-plus-02-07.png" rel="lightbox[monolite_02]">#7</a><br />
+		<strong>MonoLite Plus 0.1 界面截圖：</strong><a href="{{ site.file }}/monolite-plus-01.png" rel="lightbox[monolite_01]">#1</a> <a href="{{ site.file }}/monolite-plus-02.png" rel="lightbox[monolite_01]">#2</a> <a href="{{ site.file }}/monolite-plus-03.png" rel="lightbox[monolite_01]">#3</a></p>
+				
+		<p class=note>該主題基于 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh">署名-非商業性使用-相同方式共享 3.0 發布</a></p>
+		
+		<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-043.7z</p>
+		<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-042.7z</p>
+		<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-041.7z</p>
+		<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-04.7z</p>
+		<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-031.7z</p>
+		<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-03.7z</p>
+		<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-02.7z</p>
+		<p class=download><a href="{{ site.file }}/download/monolite-plus-043.7z">Download</a> / monolite-plus-01.7z</p>
+	</section>
+
+	<section>
+	<img src="http://a1.sparanoid.com/slimbox-voxgrowl.png">
+	</section>
+	
+	<section class=text>
+		<ul>
+		<li>MonoLite 原作者爲 fanco86 <a href="http://fanco86.deviantart.com/art/MonoLite-122756120">#</a></li>
+		<li>MonoLite Plus 由 Sparanoid 修改 <a href="http://junior-spirit.deviantart.com/art/MonoLite-Plus-144505359/">#</a></li>
+		<li>MonoLite Plus 爲 MonoLite 的修改版</li>
+		<li>Last.fm WSH Panel 代碼由 marc2003 編寫 <a href="http://www.hydrogenaudio.org/forums/index.php?showtopic=76772">#</a></li>
+		<li>光盤圖標由 PaulEnsane 制作 <a href="http://paulensane.deviantart.com/art/CD-Icon-115783933">#</a></li>
+		<li>心形圖標由 Tango Desktop Project 制作 <a href="http://tango.freedesktop.org/Tango_Desktop_Project">#</a></li>
+		<li>感歎號圖標由 Yusuke Kamiyamane 制作 <a href="http://www.pinvoke.com/">#</a></li>
+		<li>媒體庫查看方式代碼基于 hydrogenaudio.org 論壇的 2E7AH 修改 <a href="http://www.hydrogenaudio.org/forums/index.php?s=&showtopic=68552&view=findpost&p=684400">#</a></li>
+		</ul>
+	</section>
+</article>
+
+<!--
+<footer class="is-entry">
+	<div id=nv>
+		<p class=lt>Next Entry / Previous Entry</p>
+		<div class="rt sf">
+			<a href="#">asdasdas das asdaas</a><br>
+			<a href="#">asdasdas das asdaas</a>
+		</div>
+	</div>
+
+	<div id=sc>
+		<p class=lt>Search this site</p>
+		<div class="rt sf">
+			<form action=http://www.google.com/cse id=cse-search-box>
+				<input type=hidden name=cx value=sasda>
+				<input type=hidden name=ie value=utf-8>
+				<input type=search name=q size=16 placeholder="search">
+			</form>
+		</div>
+	</div>
+
+	<div id=sp>
+		<span class="yoggrtad"><a href="http://ads.yoggrt.com/www/delivery/ck.php?oaparams=2__bannerid=3__zoneid=72__OXLCA=1__cb=96da3d1472__oadest=http%3A%2F%2Fwww.firerift.com" target="_blank"><img src="http://ads.yoggrt.com/www/images/357acf49f10de1cc654b40861d2d0078.png" width="160" height="90" alt="Firerift - Content Management Changed" title="Firerift - Content Management Changed" border="0"></a></span>
+		<span class="yoggrttext"><a href="http://ads.yoggrt.com/www/delivery/ck.php?oaparams=2__bannerid=3__zoneid=72__OXLCA=1__cb=96da3d1472__oadest=http%3A%2F%2Fwww.firerift.com" target="_blank">Firerift is a new breed of CMS for web developers to empower their creativity.</a></span>
+		<p class="adby"><a href="http://www.yoggrt.com">Ads <em>by</em> Yoggrt</a></p>
+	</div>
+
+	<div id=cp>
+		<p class=lt>&copy;</p>
+		<div class="rt sf">
+			<a href="#">Sparanoid</a>
+		</div>
+	</div>
+
+	<div id=mt>
+		<p class=lt>Meta</p>
+		<div class="rt sf">
+			<li class=unprintable><a href="/feed/" title="Feed - Atom (The Atom Syndication Format)">Feed</a></li>
+			<li class=unprintable><a href="http://twitter.com/asda">Twitter</a></li>
+		</div>
+	</div>
+</footer>
+-->
+
+<footer>
+	<div id=sc>
+		<p class=lt>Search this site</p>
+		<div class="rt sf">
+			<form action=http://www.google.com/cse id=cse-search-box>
+				<input type=hidden name=cx value=sasda>
+				<input type=hidden name=ie value=utf-8>
+				<input type=search name=q size=16 placeholder="search">
+			</form>
+		</div>
+	</div>
+
+	<div id=sp>
+		<span class="yoggrtad"><a href="http://ads.yoggrt.com/www/delivery/ck.php?oaparams=2__bannerid=3__zoneid=72__OXLCA=1__cb=96da3d1472__oadest=http%3A%2F%2Fwww.firerift.com" target="_blank"><img src="http://ads.yoggrt.com/www/images/357acf49f10de1cc654b40861d2d0078.png" width="160" height="90" alt="Firerift - Content Management Changed" title="Firerift - Content Management Changed" border="0"></a></span>
+		<span class="yoggrttext"><a href="http://ads.yoggrt.com/www/delivery/ck.php?oaparams=2__bannerid=3__zoneid=72__OXLCA=1__cb=96da3d1472__oadest=http%3A%2F%2Fwww.firerift.com" target="_blank">Firerift is a new breed of CMS for web developers to empower their creativity.</a></span>
+		<p class="adby"><a href="http://www.yoggrt.com">Ads <em>by</em> Yoggrt</a></p>
+	</div>
+
+	<div id=cp>
+		<p class=lt>&copy;</p>
+		<div class="rt sf">
+			<a href="#">Sparanoid</a>
+		</div>
+	</div>
+
+	<div id=mt>
+		<p class=lt>Meta</p>
+		<div class="rt sf">
+			<li class=unprintable><a href="/feed/" title="Feed - Atom (The Atom Syndication Format)">Feed</a></li>
+			<li class=unprintable><a href="http://twitter.com/asda">Twitter</a></li>
+		</div>
+	</div>
+</footer>
+
+
+
+
+</body>
+
+</html>
