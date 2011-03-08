@@ -9,7 +9,7 @@ title: Sparanoid
 	<h2>{{ post.head }}</h2>
 	<h1 class=rt><a href="{{ post.url }}/" rel=bookmark>{{ post.title }} </a></h1>
 	{% if post.excerpt %}<h3 class=lt>{{ post.excerpt }}</h3>{% endif %}
-	<h4 title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d" }}</h4>
+	<h4 title="{{ post.date | date: "%A, %b %d %Y" }}">{{ post.date | date: "%d" }}</h4>
 </hgroup>
 
 <article>
