@@ -90,5 +90,5 @@ footer {
 	footer ul {
 		margin: 1em 0 1em 20px;
 	}
-::-moz-selection {background: rgba(0, 0, 0, 0.05);}
-::selection {background: rgba(0, 0, 0, 0.05);}
+
+::selection {color: #fff; background: rgba(0, 0, 0, 0.8);}

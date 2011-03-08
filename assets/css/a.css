@@ -7,7 +7,7 @@
 */
 @font-face {
 	/* Goudy Bookletter 1911 */
-	font-family: 'GB1911';
+	font-family: GB1911;
 	src: local('☺'), url('http://a0.sparanoid.com/assets/font/gb1911.otf') format('opentype'), url('http://a0.sparanoid.com/assets/font/gb1911.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
@@ -23,8 +23,9 @@ html, body {
 	font-family: Georgia, 'Hiragino Mincho Pro', serif
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'GB1911', Georgia, 'Hiragino Mincho Pro', serif;
+h1, h2, h3, h4, h5, h6, 
+.pl li a {
+	font-family: GB1911, Georgia, 'Hiragino Mincho Pro', serif;
 	font-weight: normal;
 }
 
@@ -86,7 +87,7 @@ hgroup {
 }
 	hgroup h2 {
 		font-size: 100px;
-		letter-spacing: -0.03em;
+		letter-spacing: -0.025em;
 		text-align: center;
 		text-transform: lowercase;
 		padding: 80px 0 0 0;
@@ -131,7 +132,7 @@ article {
 footer {
 	max-width: 1144px;
 	height: 970px;
-	margin: -500px auto 0 auto;
+	margin: -560px auto 0 auto;
 	background: url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center top,
 				url(http://a0.sparanoid.com/assets/img/f.svg) no-repeat center 500px,
 				url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center 500px,
@@ -188,7 +189,7 @@ footer {
 			}
 	#sp {
 		font-size: 14px;
-		width: 160px;
+		width: 240px;
 		margin: 0 auto;
 /* 		padding-bottom: 232px; */
 		text-align: center;
@@ -196,6 +197,7 @@ footer {
 		height: 400px;
 	}
 		.yoggrtad img {
+			margin-bottom: 10px;
 			border-radius: 4px;
 		}
 		.adby {
@@ -308,11 +310,11 @@ section .note, section .download {
 }
 
 section .note {
-	background: rgba(0, 0, 0, 0.03);
+	background: rgba(0, 0, 0, 0.04);
 }
 
 section .download {
-	background: rgba(255, 0, 0, 0.03);
+	background: rgba(255, 0, 0, 0.04);
 }
 
 /* first-children and last-children reset*/
@@ -354,11 +356,11 @@ a:hover {
 		position: fixed;
 		padding: 10%;
 		font-family: Arial, sans-serif;
-		font-size: 64px;
+		font-size: 36px;
 		text-transform: uppercase;
 		font-weight: bolder;
 		letter-spacing: -0.05em;
-		line-height: 0.77;
+		line-height: 0.8;
 /* 		word-spacing: 0.23em; */
 /* 		word-break: break-all; */
 	}
@@ -371,7 +373,7 @@ a:hover {
 	h1, h2, h3, h4, h5, h6, blockquote, abbr {margin: 1.5em 0 1em 0 !important; padding: 0 !important;}
 	p, h2, h3 {widows: 3; orphans: 3;}
 	h2, h3{page-break-after: avoid;}
-	#nv, #sc, #sp, #mt, header, hgroup h2, .lt, .unprintable {display: none !important;}
+	#nv, #sc, #sp, #mt, header, hgroup h2, hgroup h4, .lt, .unprintable {display: none !important;}
 	.text {width: 100%; margin-left: 0;}
 	hgroup, footer {margin: 0; height: auto; padding: 0 5%;}
 	footer a:before {content: "Copyright (c) ";}
