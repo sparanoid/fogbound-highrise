@@ -18,9 +18,13 @@
 	padding: 0;
 }
 
-html, body {
+body {
 	font-size: 16px;
-	font-family: Georgia, 'Hiragino Mincho Pro', serif
+	font-family: Georgia, 'Hiragino Mincho Pro', serif;
+	/* used by different posts */
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6, 
@@ -135,7 +139,6 @@ footer {
 	margin: -560px auto 0 auto;
 	background: url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center top,
 				url(http://a0.sparanoid.com/assets/img/f.svg) no-repeat center 500px,
-				url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center 500px,
 				url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center 770px;
 	padding: 563px 0 0 0;
 }
@@ -144,7 +147,6 @@ footer {
 		background: url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center top,
 					url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center 80px,
 					url(http://a0.sparanoid.com/assets/img/f.svg) no-repeat center 580px,
-					url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center 580px,
 					url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center 850px;
 	}
 /* 	#nv, #sc, #sp, #cp, #mt */
@@ -284,7 +286,7 @@ section p {
 }
 
 section ul {
-	color: #555;
+	color: rgba(0, 0, 0, 0.7);
 }
 
 section li {
