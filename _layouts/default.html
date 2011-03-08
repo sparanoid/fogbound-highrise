@@ -13,8 +13,10 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<link rel=stylesheet href="{{ site.assets }}/css/a.min.css">
 <link rel=alternate href="/feed/" type=application/atom+xml>
+<link rel=stylesheet href="{{ site.assets }}/css/a.min.css">
+
+{% if page.bg-img %}<style>body {background-image: url({{ page.bg-img }});}</style>{% endif %}
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
 
@@ -63,7 +65,7 @@
 			<form action=http://www.google.com/cse id=cse-search-box>
 				<input type=hidden name=cx value={{ site.googe-custom-search }}>
 				<input type=hidden name=ie value=utf-8>
-				<input type=search name=q size=18 placeholder="I'm a placeholder">
+				<input type=search name=q size=16>
 			</form>
 		</div>
 	</div>
