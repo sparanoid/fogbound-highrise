@@ -26,5 +26,5 @@ server_port: 4321
 exclude: 
 - README.md
 - LICENSE
-#- a.css
+- mockup
 - Rakefile
