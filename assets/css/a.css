@@ -2,6 +2,38 @@
 /*!
 */
 
+/* Reference Block
+
+	By default:
+	
+	1em = 16px
+	
+	so:
+
+	48px = 3em
+	36px = 2.25em
+	32px = 2em
+	30px = 1.875em
+	28px = 1.75em
+	26px = 1.625em
+	24px = 1.5em
+	22px = 1.375em
+	20px = 1.25em
+	18px = 1.125em
+	16px = 1em
+	15px = 0.9375em
+	14px = 0.875em
+	13px = 0.8125em
+	12px = 0.75em // problem with Titillium auto-hinting
+	11px = 0.6875em
+	10px = 0.625em
+	 9px = 0.5625em
+	 8px = 0.5em
+	 7px = 0.4375em
+	 6px = 0.375em
+
+*/
+
 /* 
 	Global styles 
 */
@@ -54,7 +86,7 @@ header ul {
 	text-align: center;
 	border-top: #000 solid 3px;
 	font-family: Arial, sans-serif;
-	font-size: 11px;
+	font-size: 0.6875em;
 	padding-top: 6px;
 	text-transform: uppercase;
 }
@@ -73,14 +105,15 @@ header ul {
 	font-family: Arial, sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 0.75em;
 	opacity: 0.4;
 	/* must use margin top to keep small font in right place, it sucks */
 	margin-top: 3px;
 }
 	/* add right paddings instead of appeal 47% to their parent elements */
-	.lt span,
-	.ltp {
+	.lt span, /* for inline elements */
+	.ltp  /* for block elements */
+	{
 		margin-right: 32px;
 	}
 .rt {
@@ -109,7 +142,7 @@ hgroup {
 		height: 186px;
 	}
 	hgroup h1 {
-		font-size: 24px;
+		font-size: 1.5em;
 		margin-top: -7px;
 	}
 	hgroup h3 {
@@ -171,7 +204,7 @@ footer {
 	}
 /* 	#nv, #sc, #sp, #cp, #mt */
 	footer .rt {
-		font-size: 12px;
+		font-size: 0.75em;
 		font-family: Arial, sans-serif;
 	}
 	#nv {
@@ -189,7 +222,7 @@ footer {
 	}
 		input[type="search"] {
 			/* webkit vendor extensions suck, right? */
-			font-size: 14px;
+			font-size: 0.875em;
 			outline: none;
 			margin-top: -5px;
 			padding: 5px 7px;
@@ -210,7 +243,7 @@ footer {
 				border: #b55 1px solid;
 			}
 	#sp {
-		font-size: 14px;
+		font-size: 0.875em;
 		width: 240px;
 		margin: 0 auto;
 /* 		padding-bottom: 232px; */
@@ -225,7 +258,7 @@ footer {
 		.adby {
 			opacity: 0.4;
 			margin-top: 1em;
-			font-size: 11px;
+			font-size: 0.6875em;
 			font-family: Arial, sans-serif;
 			text-transform: uppercase;
 		}
@@ -273,7 +306,7 @@ footer {
 	Styles for article entries 
 */
 section h3 {
-	font-size: 150%;
+	font-size: 1.5em;
 	padding: 2.5em 0;
 }
 
@@ -363,53 +396,74 @@ a:hover {
 	Styles for handhelds and printing 
 */
 /* no more media query for crappy displays, ipads and little retina iphones */
-#n {
-	display: none;
-}
-
-@media screen and (max-width: 950px) {
-	#n {
-		display: block;
-		z-index: 9000;
-		height: 100%;
-		color: #fff;
-		background: #000;
-		background: rgba(0, 0, 0, 0.95);
-		position: fixed;
-		padding: 10%;
-		font-family: Arial, sans-serif;
-		font-size: 36px;
-		text-transform: uppercase;
-		font-weight: bolder;
-		letter-spacing: -0.05em;
-		line-height: 0.8;
-/* 		word-spacing: 0.23em; */
-/* 		word-break: break-all; */
+@media screen and (max-width: 640px) {
+	body {
+		font-size: 80%;
 	}
-	
-
-
-	.lt {
-		width: 42%;
-		float: left;
-		text-align: right;
-		font-family: Arial, sans-serif;
-		font-weight: normal;
-		text-transform: uppercase;
-		font-size: 12px;
-		opacity: 0.4;
-		/* must use margin top to keep small font in right place, it sucks */
-		margin-top: 3px;
+	hgroup,
+	footer {
+		padding: 0 10%;
+		margin: 3em 0;
+		height: auto;
 	}
-	.rt {
-		width: 50%;
-		padding-left: 50px;
-		float: right;
+		hgroup h2 {
+			font-size: 32px;
+			height: auto;
+			padding: 0 0 1.5em 0;
+		}
+	footer,
+	.is-entry {
+		height: auto;
+	}
+	#sp {
+		width: 100%;
+		text-align: left;
+		height: 200px;
+	}
+	#cp {
+		padding-bottom: 80px;
+	}
+	#cp a {
+		color: #000;
 	}
 	.text {
 		width: 100%;
 		margin-left: 0;
 	}
+		/* no more padding left workaround here */
+		.text * {
+			margin-left: 0 !important;
+		}
+	.lt {
+		display: none;
+	}
+	.rt {
+		width: 100%;
+	}
+		.rt * {
+			margin-left: 0 !important;
+		}
+	hgroup, footer, .is-entry {
+		background: none;
+	}
+}
+
+@media screen and (max-device-width: 480px) {
+	body {
+		-webkit-text-size-adjust: none;
+	}
+}
+
+@media screen and (max-device-width: 320px) {
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+@media all and (orientation: portrait) {
+}
+
+@media all and (orientation: landscape) {
 }
 
 @media print {
