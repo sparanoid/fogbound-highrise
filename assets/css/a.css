@@ -67,7 +67,7 @@ header ul {
 		}
 
 .lt {
-	width: 47%;
+	width: 50%;
 	float: left;
 	text-align: right;
 	font-family: Arial, sans-serif;
@@ -78,10 +78,21 @@ header ul {
 	/* must use margin top to keep small font in right place, it sucks */
 	margin-top: 3px;
 }
+	/* add right paddings instead of appeal 47% to their parent elements */
+	.lt span,
+	.ltp {
+		margin-right: 32px;
+	}
 .rt {
-	width: 47%;
+	width: 50%;
 	float: right;
 }
+	/* add left paddings instead of appeal 47% to their parent elements */
+	.rt span,
+	.rtp,
+	.rt li:first-child {
+		margin-left: 32px;
+	}
 
 hgroup {
 	height: 1144px;
@@ -116,22 +127,31 @@ hgroup {
 article {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 5%;
+	padding: 0 10%;
 }
 	article section {
 		padding-bottom: 60px;
 	}
 	.text {
-		width: 47%;
-		margin-left: 53%;
+		width: 50%;
+		margin-left: 50%;
+/* 		padding-left: 32px; */
 		text-align: justify;
 	}
-	.pl li {
-		margin-bottom: 1em;
-	}
-	.pl p {
-		margin: 0;
-	}
+		/* these are not beautiful enough, right? still working on it */
+		.text p,
+		.text h3,
+		.text ul, .text ol,
+		.text code, .text pre,
+		.text .pl {
+			margin-left: 32px;
+		}
+			.pl li {
+				margin-bottom: 1em;
+			}
+			.pl p {
+				margin: 0;
+			}
 
 footer {
 	max-width: 1144px;
@@ -365,6 +385,30 @@ a:hover {
 		line-height: 0.8;
 /* 		word-spacing: 0.23em; */
 /* 		word-break: break-all; */
+	}
+	
+
+
+	.lt {
+		width: 42%;
+		float: left;
+		text-align: right;
+		font-family: Arial, sans-serif;
+		font-weight: normal;
+		text-transform: uppercase;
+		font-size: 12px;
+		opacity: 0.4;
+		/* must use margin top to keep small font in right place, it sucks */
+		margin-top: 3px;
+	}
+	.rt {
+		width: 50%;
+		padding-left: 50px;
+		float: right;
+	}
+	.text {
+		width: 100%;
+		margin-left: 0;
 	}
 }
 

@@ -14,19 +14,13 @@
 <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <link rel=alternate href="/feed/" type=application/atom+xml>
-<link rel=stylesheet href="{{ site.assets }}/css/a.min.css">
+<link rel=stylesheet href="{{ site.assets }}/css/a.css">
 
 {% if page.bg-img %}<style>body {background-image: url({{ page.bg-img }});}</style>{% endif %}
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
 
 <h1 id=st>{{ site.name }}</h1>
-
-<div id=n>
-	<p>Best view at:</p>
-	<p>2560 x 1440, aka. WQHD</p>
-	<p>Please pgrade your crappy display to a bigger one.</p>
-</div>
 
 <header>
 	<ul>
@@ -43,30 +37,32 @@
 <footer{% if page.title == 'Sparanoid' or page.type == 'page' or page.title == 'archive' %}{% else %} class="is-entry"{% endif %}>
 	{% if page.category == "artwork" or page.category == "project" or page.category == "notebook" %} 
 	<div id=nv>
-		<p class=lt>Next Entry / Previous Entry</p>
+		<p class=lt><span>Next Entry / Previous Entry</span></p>
 		<div class=rt>
 			{% if page.next.url %}
-				<p><a href="{{ page.next.url }}/">{{ page.next.title }}</a></p>
+				<p><a href="{{ page.next.url }}/"><span>{{ page.next.title }}</span></a></p>
 			{% else %}
-				<p>N/A</p>
+				<p><span>N/A</span></p>
 	        {% endif %}
 			{% if page.previous.url %}
-				<p><a href="{{ page.previous.url }}/">{{ page.previous.title }}</a></p>
+				<p><a href="{{ page.previous.url }}/"><span>{{ page.previous.title }}</span></a></p>
 			{% else %}
-				<p>N/A</p>
+				<p><span>N/A</span></p>
 	        {% endif %}
 		</div>
 	</div>
 	{% endif %}
 
 	<div id=sc>
-		<p class=lt>Search this site</p>
+		<p class=lt><span>Search this site</span></p>
 		<div class=rt>
-			<form action=http://www.google.com/cse id=cse-search-box>
-				<input type=hidden name=cx value={{ site.googe-custom-search }}>
-				<input type=hidden name=ie value=utf-8>
-				<input type=search name=q size=16>
-			</form>
+			<div class=rtp>
+				<form action=http://www.google.com/cse id=cse-search-box>
+					<input type=hidden name=cx value={{ site.googe-custom-search }}>
+					<input type=hidden name=ie value=utf-8>
+					<input type=search name=q size=16>
+				</form>
+			</div>
 		</div>
 	</div>
 
@@ -75,17 +71,17 @@
 	</div>
 
 	<div id=cp>
-		<p class=lt>&copy;</p>
+		<p class=lt><span>&copy;</span></p>
 		<div class=rt>
-			<a href="/">{{ site.name }}</a>
+			<a href="/"><span>{{ site.name }}</span></a>
 		</div>
 	</div>
 
 	<div id=mt>
-		<p class=lt>Meta</p>
-		<div class=rt>
+		<p class=lt><span>Meta</span></p>
+		<ul class=rt>
 			<li><a href="/feed/" title="Feed - Atom (The Atom Syndication Format)">Feed</a></li>
 			<li><a href="http://twitter.com/{{ site.twitter }}">Twitter</a></li>
-		</div>
+		</ul>
 	</div>
 </footer>
