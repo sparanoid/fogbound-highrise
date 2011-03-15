@@ -224,7 +224,7 @@ footer {
 			/* webkit vendor extensions suck, right? */
 			font-size: 0.875em;
 			outline: none;
-			margin-top: -5px;
+			margin-top: -4px;
 			padding: 5px 7px;
 /* 			-webkit-appearance: searchfield; */
 			-webkit-appearance: none;
