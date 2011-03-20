@@ -173,7 +173,7 @@ article {
 		.text ul, .text ol,
 		.text pre,
 		.text .pl {
-			padding-left: 32px;
+			margin-left: 32px;
 		}
 			.pl li {
 				margin-bottom: 1em;
