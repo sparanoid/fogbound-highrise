@@ -389,29 +389,8 @@ a:hover {
 }
 
 /* 
-	Styles for handhelds and printing 
+	Styles for printing 
 */
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-}
-
-@media	screen and (max-device-width:480px),
-		(min-device-width:1024px) and (max-width:989px),
-		(max-device-width:480px) and (orientation:landscape),
-		(min-device-width:481px) and (max-device-width:1024px) and (orientation:portrait) {
-			body {
-				-webkit-text-size-adjust: none;
-				font-size: 85%;
-			}
-}
-
-@media	(min-device-width:1024px) and (max-width:509px),
-		(max-device-width:480px) and (orientation:portrait) {
-			body {
-				-webkit-text-size-adjust: none;
-				font-size: 80%;
-			}
-}
-
 @media print {
 	* {background: transparent !important; color: #000 !important; text-shadow: none !important; border: none !important;}
 	abbr:after {content: " (" attr(title) ")";}
