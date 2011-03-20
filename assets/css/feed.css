@@ -49,6 +49,10 @@ entry>summary {
 	overflow: auto;
 }
 
+entry>content {
+	display: none;
+}
+
 subtitle:before	{ content: "Subtitle: "; }
 link:before		{ content: "Link: "; }
 id:before		{ content: "ID: "; }
@@ -57,14 +61,13 @@ rights:before	{ content: "Copyright: "; }
 author:before	{ content: "Author: "; }
 summary:before	{ content: "Summary: "; }
 
-subtitle:before, 
-link:before, 
-id:before, 
-updated:before, 
-rights:before, 
-author:before, 
-summary:before 
-{
+subtitle:before,
+link:before,
+id:before,
+updated:before,
+rights:before,
+author:before,
+summary:before {
 	font-weight: bold;
 }
 
