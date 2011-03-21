@@ -34,11 +34,8 @@
 
 */
 
-/* 
-	Global styles 
-*/
 @font-face {
-	/* Goudy Bookletter 1911 */
+/*	Goudy Bookletter 1911 */
 	font-family: GB1911;
 	src: local('☺'), url('http://a0.sparanoid.com/assets/font/gb1911.otf') format('opentype'), url('http://a0.sparanoid.com/assets/font/gb1911.ttf') format('truetype');
 	font-weight: normal;
@@ -53,7 +50,7 @@
 body {
 	font-size: 16px;
 	font-family: Georgia, 'Hiragino Mincho Pro', serif;
-	/* used by different posts */
+/*	used by different posts */
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -105,12 +102,12 @@ header ul {
 	text-transform: uppercase;
 	font-size: .75em;
 	opacity: .4;
-	/* must use margin top to keep small font in right place, it sucks */
+/*	must use margin top to keep small font in right place, it sucks */
 	margin-top: 3px;
 }
-	/* add right paddings instead of appeal 47% to their parent elements */
+/*	add right paddings instead of appeal 47% to their parent elements */
 	.lt span, /* for inline elements */
-	.ltp  /* for block elements */
+	.ltp /* for block elements */
 	{
 		margin-right: 32px;
 	}
@@ -118,7 +115,7 @@ header ul {
 	width: 50%;
 	float: right;
 }
-	/* add left paddings instead of appeal 47% to their parent elements */
+/*	add left paddings instead of appeal 47% to their parent elements */
 	.rt span,
 	.rtp,
 	.rt li:first-child {
@@ -145,15 +142,6 @@ hgroup {
 	}
 	hgroup h3 {
 	}
-	hgroup h4 {
-		width: 2em;
-		margin: 0 auto;
-		text-align: center;
-		margin-top: -2px;
-		color: #fff;
-		opacity: .999;
-		cursor: help;
-	}
 
 article {
 	max-width: 1200px;
@@ -167,7 +155,7 @@ article {
 		width: 50%;
 		margin-left: 50%;
 	}
-		/* these are not beautiful enough, right? still working on it */
+/*		these are not beautiful enough, right? still working on it */
 		.text p,
 		.text h3,
 		.text ul, .text ol,
@@ -184,7 +172,7 @@ article {
 
 footer {
 	max-width: 1144px;
-	height: 970px;
+	height: 1370px;
 	margin: -560px auto 0 auto;
 	background: url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center top,
 				url(http://a0.sparanoid.com/assets/img/f.svg) no-repeat center 500px,
@@ -192,13 +180,13 @@ footer {
 	padding: 563px 0 0 0;
 }
 	.is-entry {
-		height: 1050px;
+		height: 1450px;
 		background: url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center top,
 					url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center 80px,
 					url(http://a0.sparanoid.com/assets/img/f.svg) no-repeat center 580px,
 					url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center 850px;
 	}
-/* 	#nv, #sc, #sp, #cp, #mt */
+/* #nv, #sc, #sp, #cp, #mt */
 	footer .rt {
 		font-size: .75em;
 		font-family: Arial, sans-serif;
@@ -217,7 +205,7 @@ footer {
 		padding-bottom: 100px;
 	}
 		input[type="search"] {
-			/* webkit vendor extensions suck, right? */
+/*			webkit vendor extensions suck, right? */
 			font-size: .875em;
 			outline: none;
 			margin-top: -4px;
@@ -228,7 +216,7 @@ footer {
 			background: rgba(255, 255, 255, .2);
 			border-radius: 4px;
 		}
-		/* i really hate these shit */
+/*		i really hate these shit */
 		input[type="search"]::-webkit-search-decoration,
 		input[type="search"]::-webkit-search-cancel-button,
 		input[type="search"]::-webkit-search-results-button,
@@ -264,7 +252,7 @@ footer {
 	#cp {
 		padding-bottom: 270px;
 		color: #fff;
-		/* Shitty Apple display fixer */
+/*		Shitty Apple display fixer */
 		opacity: .999;
 	}
 		#cp a {
@@ -274,7 +262,7 @@ footer {
 				opacity: .75;
 			}
 		#cp .lt {
-			/* avoid overriding by default gray color */
+/*			avoid overriding by default gray color */
 			opacity: .999;
 		}
 		#cp .rt {
@@ -297,23 +285,11 @@ footer {
 			text-transform: uppercase;
 		}
 
-/* 
-	Styles for article entries 
-*/
 section h3 {
+/*	only h3, please */
 	font-size: 1.5em;
 	padding: 2.5em 0;
 }
-
-/* only h3, please */
-/*
-section h1 {font-size: 170%;}
-section h2 {font-size: 160%;}
-section h3 {font-size: 150%;}
-section h4 {font-size: 140%;}
-section h5 {font-size: 130%;}
-section h6 {font-size: 120%;}
-*/
 
 section a {
 	color: #b55;
@@ -388,9 +364,6 @@ a:hover {
 	transition: color 0s ease, opacity 0s ease;
 }
 
-/* 
-	Styles for printing 
-*/
 @media print {
 	* {background: transparent !important; color: #000 !important; text-shadow: none !important; border: none !important;}
 	abbr:after {content: " (" attr(title) ")";}
@@ -398,7 +371,7 @@ a:hover {
 	h1, h2, h3, h4, h5, h6, blockquote, abbr {margin: 1.5em 0 1em 0 !important; padding: 0 !important;}
 	p, h2, h3 {widows: 3; orphans: 3;}
 	h2, h3{page-break-after: avoid;}
-	#nv, #sc, #sp, #mt, header, hgroup h2, hgroup h4, .lt, .unprintable {display: none !important;}
+	#nv, #sc, #sp, #mt, header, hgroup h2, .lt, .unprintable {display: none !important;}
 	.text {width: 100%; margin-left: 0;}
 	hgroup, footer {margin: 0; height: auto; padding: 0 5%;}
 	footer a:before {content: "Copyright (c) ";}

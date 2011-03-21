@@ -9,7 +9,6 @@ title: Sparanoid
 	<h2>{{ post.head }}</h2>
 	<h1 class=rt><a href="{{ post.url }}/" rel=bookmark><span>{{ post.title }}</span></a></h1>
 	{% if post.excerpt %}<h3 class=lt><span>{{ post.excerpt }}</span></h3>{% endif %}
-	<h4 title="{{ post.date | date: "%A, %b %d %Y" }}">{{ post.date | date: "%d" }}</h4>
 </hgroup>
 
 <article>
