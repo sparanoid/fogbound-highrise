@@ -393,7 +393,7 @@ a:hover {
 	}
 	body {
 		min-width: 0 !important;
-		padding: 3em 7% !important;
+		padding: 3em 10% !important;
 	}
 	h1, h2, h3, h4, h5, h6, blockquote, abbr {
 		margin: 1.7em 0 1.3em 0 !important;
@@ -403,9 +403,6 @@ a:hover {
 	}
 	header ul li {
 		margin-right: 1em !important;
-	}
-	article section {
-		padding-bottom: 1em !important;
 	}
 	article img, article video {
 		width: 100% !important;
@@ -420,7 +417,8 @@ a:hover {
 		background: rgba(255, 255, 0, .2) !important;
 	}
 	#sp {
-		padding-bottom: 30px !important;
+		padding: 30px 0 !important;
+		border-top: 1px solid #eee !important;
 	}
 	#cp a {color: #999;}
 		#cp a:hover {color: #000;}
@@ -430,4 +428,5 @@ a:hover {
 @media print {
 	* {color: #000 !important;}
 	header, #sp {display: none;}
+	article section p {text-align: justify !important;}
 }
