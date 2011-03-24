@@ -6,10 +6,19 @@ destination: ./_site
 permalink: /:categories/:title
 markdown: rdiscount
 
-# custom vars
+# site url
 url: sparanoid.com
+
+# used by images inserted in posts
 file: http://a1.sparanoid.com
-assets: /assets
+
+# used by specified background images
+assets-cdn: http://a2.sparanoid.com
+
+# used by css url in default.html
+assets-path: /assets
+
+# custom vars
 name: Sparanoid
 full-name: Tunghiao Liu
 email: info@sparanoid.com
