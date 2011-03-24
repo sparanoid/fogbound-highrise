@@ -7,5 +7,5 @@ excerpt: It's me
 ---
 
 <section class="text">
-Yes, it's me.
+<p>Yes, it's me.</p>
 </section>

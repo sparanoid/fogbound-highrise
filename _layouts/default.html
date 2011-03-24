@@ -14,9 +14,9 @@
 <meta name=viewport content="width=device-width">
 
 <link rel=alternate href="/feed/" type=application/atom+xml>
-<link rel=stylesheet href="{{ site.assets }}/css/a.min.css">
+<link rel=stylesheet href="{{ site.assets-path }}/css/a.css">
 
-{% if page.bg-img %}<style>body {background-image: url({{ page.bg-img }});}</style>{% endif %}
+{% if page.bg-img %}<style>body {background-image: url({{ site.assets-cdn }}{{ site.assets-path }}{{ page.bg-img }});}</style>{% endif %}
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
 

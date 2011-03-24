@@ -30,9 +30,9 @@ excerpt: A WordPress theme, now it's on Stacey and Jekyll
 </section>
 
 <section class=text>
-更多照片：<a href="{{ site.file }}/lindsay-koinaka-3-print-example-02.jpg">預覽 #2</a> -
+<p>更多照片：<a href="{{ site.file }}/lindsay-koinaka-3-print-example-02.jpg">預覽 #2</a> -
 <a href="{{ site.file }}/lindsay-koinaka-3-print-example-03.jpg">預覽 #3</a> -
-<a href="{{ site.file }}/lindsay-koinaka-3-print-example-04.jpg">預覽 #4</a>
+<a href="{{ site.file }}/lindsay-koinaka-3-print-example-04.jpg">預覽 #4</a></p>
 
 <p>這個主題有一部分靈感是來源於 <a href="http://new.myfonts.com/fonts/cheapprofonts/scriptina-pro/regular/">Scriptine Pro</a>，為此我還做了幾個概念草圖，但總覺得 Scriptine Pro 缺少點甚麼，總之就是還差那麼一點點，於是就想何不自己去做一個出來？所以我也計畫了一個造字的工程，希望可以不久就能見面。如果誰有比較好的字型書籍推薦，歡迎通過 Twitter 或電郵告訴我</p>
 

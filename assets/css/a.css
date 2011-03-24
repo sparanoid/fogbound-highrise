@@ -1,4 +1,7 @@
-/*! (c) sparanoid.com */
+@charset "utf-8";
+
+/*!
+ © sparanoid.com */
 /*!
 */
 
@@ -37,7 +40,7 @@
 @font-face {
 /*	Goudy Bookletter 1911 */
 	font-family: GB1911;
-	src: local('☺'), url('http://a0.sparanoid.com/assets/font/gb1911.otf') format('opentype'), url('http://a0.sparanoid.com/assets/font/gb1911.ttf') format('truetype');
+	src: local('☺'), url('http://a2.sparanoid.com/assets/font/gb1911.otf') format('opentype'), url('http://a2.sparanoid.com/assets/font/gb1911.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -48,6 +51,7 @@
 }
 
 body {
+	min-width: 960px;
 	font-size: 16px;
 	font-family: Georgia, 'Hiragino Mincho Pro', serif;
 /*	used by different posts */
@@ -69,9 +73,6 @@ a {
 	a:hover {
 		color: #b55;
 	}
-	a:active {
-		color: #b22;
-	}
 
 #st {
 	display: none;
@@ -87,7 +88,7 @@ header ul {
 }
 	header li {
 		display: inline;
-		margin-right: 1em;
+		margin: 0 .5em;
 	}
 		.current a {
 			color: #b55;
@@ -118,7 +119,8 @@ header ul {
 /*	add left paddings instead of appeal 47% to their parent elements */
 	.rt span,
 	.rtp,
-	.rt li:first-child {
+	.rt li:first-child /* for meta list in footer */
+	{
 		margin-left: 32px;
 	}
 
@@ -126,10 +128,10 @@ hgroup {
 	height: 1144px;
 	max-width: 1144px;
 	margin: -50px auto -800px auto;
-	background: url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center -297px;
+	background: url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center -297px;
 }
 	hgroup h2 {
-		font-size: 100px;
+		font-size: 6.25em;
 		letter-spacing: -.025em;
 		text-align: center;
 		text-transform: lowercase;
@@ -149,13 +151,13 @@ article {
 	padding: 0 10%;
 }
 	article section {
-		padding-bottom: 60px;
+		padding-bottom: 80px;
 	}
 	.text {
 		width: 50%;
 		margin-left: 50%;
 	}
-/*		these are not beautiful enough, right? still working on it */
+/*		these are not graceful enough, right? still working on it */
 		.text p,
 		.text h3,
 		.text ul, .text ol,
@@ -163,6 +165,7 @@ article {
 		.text .pl {
 			margin-left: 32px;
 		}
+/*			post list in pages */
 			.pl li {
 				margin-bottom: 1em;
 			}
@@ -174,17 +177,17 @@ footer {
 	max-width: 1144px;
 	height: 1370px;
 	margin: -560px auto 0 auto;
-	background: url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center top,
-				url(http://a0.sparanoid.com/assets/img/f.svg) no-repeat center 500px,
-				url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center 770px;
+	background: url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center top,
+				url(http://a2.sparanoid.com/assets/img/f.svg) no-repeat center 500px,
+				url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center 770px;
 	padding: 563px 0 0 0;
 }
 	.is-entry {
 		height: 1450px;
-		background: url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center top,
-					url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center 80px,
-					url(http://a0.sparanoid.com/assets/img/f.svg) no-repeat center 580px,
-					url(http://a0.sparanoid.com/assets/img/b.svg) no-repeat center 850px;
+		background: url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center top,
+					url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center 80px,
+					url(http://a2.sparanoid.com/assets/img/f.svg) no-repeat center 580px,
+					url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center 850px;
 	}
 /* #nv, #sc, #sp, #cp, #mt */
 	footer .rt {
@@ -223,7 +226,7 @@ footer {
 		input[type="search"]::-webkit-search-results-decoration {
 			display: none;
 		}
-			input:focus {
+			input[type="search"]:focus {
 				border: #b55 1px solid;
 			}
 	#sp {
@@ -231,7 +234,6 @@ footer {
 		width: 240px;
 		margin: 0 auto;
 		text-align: center;
-/* 		background: #f00; */
 		height: 400px;
 	}
 		.yoggrtad img {
@@ -270,7 +272,6 @@ footer {
 			text-transform: uppercase;
 		}
 	#mt {
-		
 	}
 		#mt li {
 			list-style: none;
@@ -288,7 +289,7 @@ footer {
 section h3 {
 /*	only h3, please */
 	font-size: 1.5em;
-	padding: 2.5em 0;
+	margin: 2.5em 0;
 }
 
 section a {
@@ -301,7 +302,7 @@ section a {
 section img,
 section video {
 	width: 100%;
-	border-radius: 4px;
+	border-radius: 5px;
 }
 
 section p {
@@ -332,7 +333,7 @@ section code, section pre {
 
 section .note, section .download {
 	padding: 1.2em 2em 1.2em 2em;
-	border-radius: 6px;
+	border-radius: 5px;
 }
 
 section .note {
@@ -353,9 +354,12 @@ section h3:last-child {
 	margin-bottom: 0;
 }
 
-::selection {color: #fff; background: rgba(182, 64, 64, .8);}
+::selection {
+	color: #fff;
+	background: rgba(182, 64, 64, .8);
+}
 
-/* -moz? -webkit? -o? -khtml? -ms? -ooxx? you love them? no no no, all vendor exts are ridiculous */
+/* -moz? -webkit? -o? -khtml? -ms? you love them? no no no, all vendor exts are ridiculous. */
 a {
 	transition: color .8s ease, opacity .8s ease;
 }
@@ -364,17 +368,66 @@ a:hover {
 	transition: color 0s ease, opacity 0s ease;
 }
 
+@media	print,
+		screen and (max-device-width:480px),
+		(min-device-width:1024px) and (max-width:959px),
+		(max-device-width:480px) and (orientation:landscape),
+		(min-device-width:481px) and (max-device-width:1024px) and (orientation:portrait) {
+/*	comment resets */
+	* {
+		margin: 0 !important;
+		padding: 0 !important;
+		width: auto !important;
+		height: auto !important;
+		text-align: left !important;
+		text-shadow: none !important;
+		background: transparent !important;
+		border: none !important;
+		opacity: 1 !important;
+		float: none !important;
+	}
+
+/*	specified resets */
+	#nv, #sc, #mt, hgroup h2, .lt {
+		display: none;
+	}
+	body {
+		min-width: 0 !important;
+		padding: 3em 7% !important;
+	}
+	h1, h2, h3, h4, h5, h6, blockquote, abbr {
+		margin: 1.7em 0 1.3em 0 !important;
+	}
+	p {
+		margin: 1em 0 !important;
+	}
+	header ul li {
+		margin-right: 1em !important;
+	}
+	article section {
+		padding-bottom: 1em !important;
+	}
+	article img, article video {
+		width: 100% !important;
+	}
+	abbr:after {
+		content: " (" attr(title) ")";
+	}
+	.pl p {
+		margin-top: 0 !important;
+	}
+	.note, .download {
+		background: rgba(255, 255, 0, .2) !important;
+	}
+	#sp {
+		padding-bottom: 30px !important;
+	}
+	#cp a {color: #999;}
+		#cp a:hover {color: #000;}
+		#cp a:before {content: "Copyright © ";}
+}
+
 @media print {
-	* {background: transparent !important; color: #000 !important; text-shadow: none !important; border: none !important;}
-	abbr:after {content: " (" attr(title) ")";}
-	img, pre, blockquote {page-break-inside: avoid;}
-	h1, h2, h3, h4, h5, h6, blockquote, abbr {margin: 1.5em 0 1em 0 !important; padding: 0 !important;}
-	p, h2, h3 {widows: 3; orphans: 3;}
-	h2, h3{page-break-after: avoid;}
-	#nv, #sc, #sp, #mt, header, hgroup h2, .lt, .unprintable {display: none !important;}
-	.text {width: 100%; margin-left: 0;}
-	hgroup, footer {margin: 0; height: auto; padding: 0 5%;}
-	footer a:before {content: "Copyright (c) ";}
-	.rt {float: none; width: 100%;}
-	.note, .download {margin: 0 !important; padding: 0 !important;}
+	* {color: #000 !important;}
+	header, #sp {display: none;}
 }
