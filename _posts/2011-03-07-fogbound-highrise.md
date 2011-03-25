@@ -7,5 +7,5 @@ excerpt: The 15th version of sparanoid.com, featuring Jekyll
 ---
 
 <section>
-<p><a href="https://github.com/sparanoid/fogbound-highrise"><img src="http://a1.sparanoid.com/fogbound-highrise.png"></a></p>
+<p><a href="https://github.com/sparanoid/fogbound-highrise"><img src="{{ site.file }}/fogbound-highrise.png"></a></p>
 </section>

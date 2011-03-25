@@ -369,10 +369,10 @@ a:hover {
 }
 
 @media	print,
-		screen and (max-device-width:480px),
-		(min-device-width:1024px) and (max-width:959px),
-		(max-device-width:480px) and (orientation:landscape),
-		(min-device-width:481px) and (max-device-width:1024px) and (orientation:portrait) {
+		screen and (max-device-width: 480px),
+		(min-device-width: 1024px) and (max-width: 959px),
+		(max-device-width: 480px) and (orientation: landscape),
+		(min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
 /*	comment resets */
 	* {
 		margin: 0 !important;
@@ -407,6 +407,11 @@ a:hover {
 	article img, article video {
 		width: 100% !important;
 	}
+	footer:after {
+		content: "Your screen is too fucking small.";
+		line-height: 4em !important;
+		color: red;
+	}
 	abbr:after {
 		content: " (" attr(title) ")";
 	}
@@ -429,4 +434,5 @@ a:hover {
 	* {color: #000 !important;}
 	header, #sp {display: none;}
 	article section p {text-align: justify !important;}
+	footer:after {content: none;}
 }
