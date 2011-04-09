@@ -51,7 +51,7 @@
 	padding: 0;
 }
 
-:root {
+body {
 	min-width: 960px;
 	font-size: 16px;
 	font-family: Georgia, 'Hiragino Mincho Pro', serif;
@@ -393,7 +393,7 @@ a:hover {
 	#nv, #sc, #mt, hgroup h2, .lt {
 		display: none;
 	}
-	:root {
+	body {
 		min-width: 0 !important;
 		padding: 3em 10% !important;
 	}
