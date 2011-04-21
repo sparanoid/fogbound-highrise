@@ -36,32 +36,30 @@
 <footer{% if page.title == 'Sparanoid' or page.type == 'page' or page.title == 'archive' %}{% else %} class="is-entry"{% endif %}>
 	{% if page.category == "artwork" or page.category == "project" or page.category == "notebook" %} 
 	<div id=nv>
-		<p class=lt><span>Next Entry / Previous Entry</span></p>
+		<p class=lt>Next Entry / Previous Entry</p>
 		<div class=rt>
 			{% if page.next.url %}
-				<p><a href="{{ page.next.url }}/"><span>{{ page.next.title }}</span></a></p>
+				<p><a href="{{ page.next.url }}/">{{ page.next.title }}</a></p>
 			{% else %}
-				<p><span>N/A</span></p>
+				<p>N/A</p>
 	        {% endif %}
 			{% if page.previous.url %}
-				<p><a href="{{ page.previous.url }}/"><span>{{ page.previous.title }}</span></a></p>
+				<p><a href="{{ page.previous.url }}/">{{ page.previous.title }}</a></p>
 			{% else %}
-				<p><span>N/A</span></p>
+				<p>N/A</p>
 	        {% endif %}
 		</div>
 	</div>
 	{% endif %}
 
 	<div id=sc>
-		<p class=lt><span>Search this site</span></p>
+		<p class=lt>Search this site</p>
 		<div class=rt>
-			<div class=rtp>
-				<form action=http://www.google.com/cse id=cse-search-box>
-					<input type=hidden name=cx value={{ site.googe-custom-search }}>
-					<input type=hidden name=ie value=utf-8>
-					<input type=search name=q size=16>
-				</form>
-			</div>
+			<form action=http://www.google.com/cse id=cse-search-box>
+				<input type=hidden name=cx value={{ site.googe-custom-search }}>
+				<input type=hidden name=ie value=utf-8>
+				<input type=search name=q size=16>
+			</form>
 		</div>
 	</div>
 
@@ -70,14 +68,14 @@
 	</div>
 
 	<div id=cp>
-		<p class=lt><span>&copy;</span></p>
+		<p class=lt>&copy;</p>
 		<div class=rt>
-			<a href="/"><span>{{ site.name }}</span></a>
+			<a href="/">{{ site.name }}</a>
 		</div>
 	</div>
 
 	<div id=mt>
-		<p class=lt><span>Meta</span></p>
+		<p class=lt>Meta</p>
 		<ul class=rt>
 			<li><a href="/feed/" title="Feed - Atom (The Atom Syndication Format)">Feed</a></li>
 			<li><a href="http://twitter.com/{{ site.twitter }}">Twitter</a></li>
