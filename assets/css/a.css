@@ -51,7 +51,7 @@
 	padding: 0;
 }
 
-body {
+:root {
 	min-width: 960px;
 	font-size: 16px;
 	font-family: Georgia, 'Hiragino Mincho Pro', serif;
@@ -120,15 +120,15 @@ hgroup {
 	height: 1144px;
 	max-width: 1144px;
 	margin: -50px auto -800px auto;
-	background: url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center -297px;
+	background: url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center -300px;
 }
 	hgroup h2 {
-		font-size: 6.25em;
+		font-size: 3.5em;
 		letter-spacing: -.025em;
 		text-align: center;
 		text-transform: lowercase;
-		padding: 80px 0 0 0;
-		height: 185px;
+		padding: 110px 0 0 0;
+		height: 153px;
 	}
 	hgroup h1 {
 		font-size: 1.5em;
@@ -378,7 +378,7 @@ a:hover {
 	#nv, #sc, #mt, hgroup h2, .lt {
 		display: none;
 	}
-	body {
+	:root {
 		min-width: 0 !important;
 		padding: 3em 10% !important;
 	}
