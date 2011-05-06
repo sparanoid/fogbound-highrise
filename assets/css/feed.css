@@ -57,13 +57,33 @@ entry>content {
 	display: none;
 }
 
-subtitle:before	{ content: "Subtitle: "; }
-link:before		{ content: "Link: "; }
-id:before		{ content: "ID: "; }
-updated:before	{ content: "Updated: "; }
-rights:before	{ content: "Copyright: "; }
-author:before	{ content: "Author: "; }
-summary:before	{ content: "Summary: "; }
+subtitle:before {
+	content: "Subtitle: ";
+}
+
+link:before {
+	content: "Link: ";
+}
+
+id:before {
+	content: "ID: ";
+}
+
+updated:before {
+	content: "Updated: ";
+}
+
+rights:before {
+	content: "Copyright: ";
+}
+
+author:before {
+	content: "Author: ";
+}
+
+summary:before {
+	content: "Summary: ";
+}
 
 subtitle:before,
 link:before,
