@@ -354,7 +354,7 @@ a:hover {
 	transition: color 0s ease, opacity 0s ease;
 }
 
-@media	print,
+@media print,
 		screen and (max-device-width: 480px),
 		(min-device-width: 1024px) and (max-width: 959px),
 		(max-device-width: 480px) and (orientation: landscape),
