@@ -41,7 +41,7 @@
 @font-face {
 /*	Goudy Bookletter 1911 */
 	font-family: GB1911;
-	src: local('☺'), url('http://a2.sparanoid.com/assets/font/gb1911.otf') format('opentype'), url('http://a2.sparanoid.com/assets/font/gb1911.ttf') format('truetype');
+	src: local('☺'), url('../font/gb1911.otf') format('opentype'), url('../font/gb1911.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -120,7 +120,7 @@ hgroup {
 	height: 1144px;
 	max-width: 1144px;
 	margin: -50px auto -800px auto;
-	background: url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center -300px;
+	background: url(../img/b.svg) no-repeat center -300px;
 }
 	hgroup h2 {
 		font-size: 3.5em;
@@ -163,17 +163,17 @@ footer {
 	max-width: 1144px;
 	height: 1370px;
 	margin: -560px auto 0 auto;
-	background: url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center top,
-				url(http://a2.sparanoid.com/assets/img/f.svg) no-repeat center 500px,
-				url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center 770px;
+	background: url(../img/b.svg) no-repeat center top,
+				url(../img/f.svg) no-repeat center 500px,
+				url(../img/b.svg) no-repeat center 770px;
 	padding: 563px 0 0 0;
 }
 	.is-entry {
 		height: 1450px;
-		background: url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center top,
-					url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center 80px,
-					url(http://a2.sparanoid.com/assets/img/f.svg) no-repeat center 580px,
-					url(http://a2.sparanoid.com/assets/img/b.svg) no-repeat center 850px;
+		background: url(../img/b.svg) no-repeat center top,
+					url(../img/b.svg) no-repeat center 80px,
+					url(../img/f.svg) no-repeat center 580px,
+					url(../img/b.svg) no-repeat center 850px;
 	}
 /* #nv, #sc, #sp, #cp, #mt */
 	footer .rt {
