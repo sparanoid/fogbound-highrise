@@ -10,10 +10,10 @@ markdown: rdiscount
 url: sparanoid.com
 
 # used by images inserted in posts
-file: http://a1.sparanoid.com
+file: http://rsrc.sparanoid.com
 
 # used by specified background images
-assets-cdn: http://a2.sparanoid.com
+assets-cdn: 
 
 # used by css url in default.html
 assets-path: /assets
